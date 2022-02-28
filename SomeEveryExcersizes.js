@@ -27,7 +27,7 @@ function hasAZero(num){
 // Write a function called hasOnlyOddNumbers which accepts an array and returns true if every single number in the array is odd. If any of the values in the array
 
 const oddNumArr = [1,3,5,7];
-const fakeOddNumArr = [1,3,5,7,8];
+const fakeOddNumArr = [1,3,5,7,8,1];
 
 function hasOnlyOddNumber(arr){
     return arr.every(function(val){
@@ -36,3 +36,16 @@ function hasOnlyOddNumber(arr){
     })
 }
 
+
+// hasNoDuplicates
+// Write a function called hasNoDuplicates which accepts an array and returns true if there are no duplicate values (more than one element in the array that has the same value as another). If there are any duplicates, the function should return false.
+
+function hasNoDuplicates(arr){
+    const tempArr =[];
+    let z = arr.every(function(val){
+        let v = tempArr.indexOf(val) !== -1
+        tempArr.push(val);
+        return v
+    })
+    return z;
+}
